@@ -1,0 +1,47 @@
+@{
+    ViewData["Title"] = "Lesson Calculator";
+}
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <h1>&#9835; Lesson Calculator</h1>
+    <p>Find out how much personalized singing lessons will cost</p>
+</div>
+
+<!-- Calculator -->
+<div class="calculator-card">
+    <h2>Calculate Your Total</h2>
+    <p class="subtitle">Enter the number of hours and we'll do the math!</p>
+
+    <!-- Number of Hours -->
+    <div class="mb-3">
+        <label for="hoursInput">Number of Hours</label>
+        <input type="text" class="form-control" id="hoursInput" placeholder="e.g. 5" />
+        <div class="validation-error" id="hoursError">Please enter a positive number.</div>
+    </div>
+
+    <!-- Hourly Rate (read-only) -->
+    <div class="mb-3">
+        <label for="rateInput">Hourly Rate</label>
+        <input type="text" class="form-control" id="rateInput" value="$25.00" readonly />
+    </div>
+
+    <!-- Calculate Button -->
+    <div class="mb-3">
+        <button type="button" class="btn btn-calculate" id="calculateBtn">Calculate Total</button>
+    </div>
+
+    <!-- Total Output -->
+    <div class="mb-3">
+        <label for="totalOutput">Total Cost</label>
+        <input type="text" class="form-control total-output" id="totalOutput" placeholder="$0.00" readonly />
+    </div>
+</div>
+
+<!-- Back to Home -->
+<div class="text-center mb-4">
+    <a asp-controller="Home" asp-action="Index" class="back-link">
+        &larr; Back to Home
+    </a>
+</div>
+

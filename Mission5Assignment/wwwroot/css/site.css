@@ -1,31 +1,270 @@
+/* ============================
+   Singing With Ryan - Site Styles
+   Blue & White Theme
+   ============================ */
+
+/* ---------- Base ---------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+    html {
+        font-size: 16px;
+    }
 }
 
 body {
-  margin-bottom: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 100px; /* space for footer */
+    background-color: #f4f8fc;
+    color: #2c3e50;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    background: linear-gradient(135deg, #1a5276, #2980b9);
+    padding: 0.75rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff !important;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+.brand-icon {
+    font-size: 1.6rem;
+}
+
+.navbar .nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    margin-left: 1rem;
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #fff !important;
+}
+
+/* ---------- Hero Section ---------- */
+.hero-section {
+    background: linear-gradient(135deg, #1a5276, #2980b9, #3498db);
+    color: #fff;
+    padding: 3.5rem 1rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+    margin: -1rem -0.75rem 2rem -0.75rem;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ---------- Content Cards ---------- */
+.content-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e8eef3;
+}
+
+.content-card h2 {
+    color: #1a5276;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.content-card p {
+    line-height: 1.8;
+    color: #4a5568;
+}
+
+/* ---------- Images ---------- */
+.hobby-image {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.image-caption {
+    text-align: center;
+    font-style: italic;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ---------- Calculator Page ---------- */
+.calculator-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    max-width: 550px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8eef3;
+}
+
+.calculator-card h2 {
+    color: #1a5276;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.calculator-card .subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+}
+
+.calculator-card label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.3rem;
+}
+
+.calculator-card .form-control {
+    border-radius: 0.5rem;
+    border: 1.5px solid #d1dce5;
+    padding: 0.6rem 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calculator-card .form-control:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 0 0.2rem rgba(41, 128, 185, 0.2);
+}
+
+.calculator-card .form-control[readonly] {
+    background-color: #eaf2f8;
+    color: #1a5276;
+    font-weight: 600;
+}
+
+.btn-calculate {
+    background: linear-gradient(135deg, #1a5276, #2980b9);
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.7rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 100%;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-calculate:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(26, 82, 118, 0.3);
+    color: #fff;
+}
+
+.btn-calculate:active {
+    transform: translateY(0);
+}
+
+.total-output {
+    background-color: #d4efdf;
+    border: 2px solid #27ae60;
+    color: #1e8449;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+}
+
+.validation-error {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.validation-error.show {
+    display: block;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #1a5276, #2980b9);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 1.2rem 0;
+    font-size: 0.9rem;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* ---------- Buttons & Links ---------- */
+a {
+    color: #2980b9;
+}
+
+a:hover {
+    color: #1a5276;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #2980b9;
+    border-color: #2471a3;
+}
+
+.btn-primary:hover {
+    background-color: #1a5276;
+    border-color: #154360;
+}
+
+/* ---------- Utilities ---------- */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #2980b9;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+    color: var(--bs-secondary-color);
+    text-align: end;
 }
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+    text-align: start;
+}
+
+/* ---------- Back Link ---------- */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
 }

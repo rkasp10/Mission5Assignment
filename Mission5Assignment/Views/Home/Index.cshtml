@@ -1,8 +1,60 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Hero Section -->
+<div class="hero-section">
+    <h1>&#9835; Singing With Ryan</h1>
+    <p>Learn how to get the most out of your voice</p>
+</div>
+
+<!-- Intro -->
+<div class="content-card">
+    <h2>Why Singing?</h2>
+    <p>
+        Singing has been a big part of my life since 8th grade, and has facilitated some of the best memories and experiences of my life.
+        Most recently, I've been able to be part of BYU Singers, which has allowed me to travel throughout the world and meet amazing people
+        and perform in incredible venues.
+    </p>
+    <p>
+        Learning to sing at a high level requires effort and practice, but it's very doable and highly satisfying. I think everyone should take
+        the time to learn how to get the most out of their voice--even if it's just to have more fun singing in the car or the shower.
+    </p>
+</div>
+
+<!-- Photos from Europe choir tour -->
+<h3 class="text-center mb-3" style="color: #1a5276;">Photos from last year's BYU Singers tour to Italy, Greece, Switzerland, and Belgium!</h3>
+<div class="row g-4 mb-4">
+    <div class="col-md-6">
+        <img src="~/images/2bd77aec167f82069717713a64abd2c4.JPEG"
+             alt="Ryan on choir tour in Europe"
+             class="hobby-image" />
+    </div>
+    <div class="col-md-6">
+        <img src="~/images/IMG_2032.jpeg"
+             alt="Ryan on choir tour in Europe"
+             class="hobby-image" />
+    </div>
+    <div class="col-md-6">
+        <img src="~/images/IMG_2342.jpeg"
+             alt="Ryan on choir tour in Europe"
+             class="hobby-image" />
+    </div>
+    <div class="col-md-6">
+        <img src="~/images/IMG_2501.JPG"
+             alt="Ryan on choir tour in Europe"
+             class="hobby-image" />
+    </div>
+</div>
+
+<!-- Direct to 2nd page -->
+<div class="content-card text-center">
+    <h2>Want to Learn to Sing?</h2>
+    <p>
+        I'd love to help you get started on your singing journey. Check out my lesson calculator to see
+        prices for vocal coaching.
+    </p>
+    <a asp-controller="Home" asp-action="Calculator" class="btn btn-calculate" style="max-width: 300px; display: inline-block;">
+        &#9835; View Lesson Pricing
+    </a>
 </div>
